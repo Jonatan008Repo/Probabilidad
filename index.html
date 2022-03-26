@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Permutaciones, Ordenaciones, Ordenaciones con repetición, Combinaciones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="bootstrap/js/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--Permutaciones:-->
+    <div class="container" style="margin-top: 2%;">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="page-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"> Permutaciones: <i>P<sub>n</sub></i> = <i>n</i>!</a>
+                    </h3>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="well well-large">
+                            <label for="nfact" class="control-label">¿Cuántos objetos(<i>n</i>)  quieres ordenar?</label>
+                            <input class="form-control" type="number" value="0" id="nfact" min="0" max="15" />
+                            <button type="" id="btn1" class="btn btn-primary btn-block">Calcula</button>
+
+                            <div id="perRes1"></div>
+                        </div>
+                        <button class="btn btn-primary" data-toggle="collapse" data-target="#demo"><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;Ayuda</button>
+
+                        <div id="demo" class="collapse well well-large text-justify">
+                            <br />
+                            <p> Se llaman permutaciones de <n>n</n> objetos  a las diferentes maneras en que se pueden ordenar esos n objetos; todas las permutaciones constan de los mismos <i>n</i> elementos, pero se consideran diferentes, por el orden en que se colocan éstos. Notación: <i>P<sub>n</sub></i></p>
+                            <p>
+                                Para calcular el número de permutaciones que se pueden formar con los <i>n</i> objetos, se hacen las siguientes consideraciones: la elección del primer objeto se puede hacer de <i>n</i> maneras diferentes; la elección del segundo objeto se puede hacer de (<i>n</i> – 1) maneras diferentes, ..., y la elección del <i>n</i>-ésimo objeto sólo se puede hacer de una manera.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="page-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Ordenaciones: <i>O<sub>n<sup>r</sup></sub></i> = <i>n!/(n-r)!</i></a>
+                    </h3>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="well well-large">
+                            <label for="nfact2" class="control-label">¿Cuántos objetos totales(<i>n</i>) son?</label>
+                            <input class="form-control" type="number" value="1" id="nfact2" min="1" max="15" />
+                            <label for="rtotal1" class="control-label">¿Cuántos objetos(<i>r</i>) quieres ordenar?</label>
+                            <input class="form-control" type="number" value="0" id="rtotal1" min="0" max="15" />
+                            <button type="" id="btn2" class="btn btn-primary btn-block">Calcula</button>
+                            <div id="perRes2"></div>
+                        </div>
+                        <button class="btn btn-primary" data-toggle="collapse" data-target="#demo1"><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;Ayuda</button>
+                        <div id="demo1" class="collapse well well-large text-justify">
+                            <br />
+                            <p>
+                                Se llaman ordenaciones de <i>n</i> objetos  de orden <i>r</i> a las diferentes maneras de escoger secuencialmente <i>r</i> objetos de entre <i>n</i> posibles, de modo cada una de las ordenaciones es distinta de las demás, si difiere en alguno de sus objetos o en el orden de ellos. Notación: <i>O<sub>n<sup>r</sup></sub></i>
+                            </p>
+                            <p>
+                                Para calcular el número de ordenaciones de <i>r</i> objetos  que se pueden formar con los <i>n</i> objetos disponibles, se hacen las siguientes consideraciones: la elección del primer objeto se puede hacer de <i>n</i> maneras diferentes; la elección del segundo objeto se puede hacer de (<i>n</i> – 1) maneras diferentes, ..., y la elección del <i>r</i>-ésimo objeto se puede hacer de (<i>n</i> – <i>r</i> + 1) maneras diferentes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="page-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><span>Ordenaciones con repetición: </span><span class="text-nowrap"><i>OR<sub>n<sup>r</sup></sub></i> = <i>n<sup>r</sup></i></span></a>
+                    </h3>
+                </div>
+                <div id="collapse3" class="panel panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="well well-large">
+                            <label for="nfact3" class="control-label">¿Cuántos objetos totales(<i>n</i>) son?</label>
+                            <input class="form-control" type="number" value="0" id="nfact3" min="0" max="15" />
+                            <label for="rtotal2" class="control-label">¿Cuántos objetos(<i>r</i>)  quieres ordenar?</label>
+                            <input class="form-control" type="number" value="0" id="rtotal2" min="0" max="15" />
+                            <button type="" id="btn3" class="btn btn-primary btn-block">Calcula</button>
+                            <div id="perRes3"></div>
+                        </div>
+                        <button class="btn btn-primary" data-toggle="collapse" data-target="#demo2"><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;Ayuda</button>
+                        <div id="demo2" class="collapse well well-large text-justify">
+                            <br />
+                            <p>
+                                Se llama ordenaciones con repetición de <i>n</i> objetos, de orden <i>r</i> a las diferentes maneras de efectuar secuencialmente <i>r</i> acciones, cada una de las cuales se puede presentar de <i>n</i> distintas maneras. El hecho de permitir la repetición de objetos, hace que el valor de <i>r</i> no esté restringido, pues el número <i>r</i> de acciones a efectuar puede ser mayor al número <i>n</i> de maneras en que puede presentarse cada una de ellas. Notación: <i>OR<sub>n<sup>r</sup></sub></i>
+                            </p>
+                            <P>
+                                Para calcular el número de ordenaciones con repetición de <i>r</i> objetos(<i>r</i>)  que se pueden formar con <i>n</i> disponibles, se hacen las siguientes consideraciones: la elección del primer objeto se puede hacer de <i>n</i> maneras diferentes; la elección del segundo objeto se puede hacer de <i>n</i> maneras diferentes, ..., y la elección del <i>r</i>-ésimo objeto se puede hacer de <i>n</i> maneras diferentes.
+                            </P>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="page-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><span>Combinaciones:</span> <span class="text-nowrap"><i>C<sub>n<sup>r</sup></sub></i> = <i>n!/(r!(n-r)!)</i></span></a>
+                    </h3>
+                </div>
+                <div id="collapse4" class="panel panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="well well-large">
+                            <label for="nfact4" class="control-label">¿Cuántos objetos totales(<i>n</i>) son?</label>
+                            <input class="form-control" type="number" value="0" id="nfact4" min="0" max="15" />
+                            <label for="rtotal3" class="control-label">¿Cuántos objetos(<i>r</i>)  quieres ordenar?</label>
+                            <input class="form-control" type="number" value="0" id="rtotal3" min="0" max="15" />
+
+                            <button type="" id="btn4" class="btn btn-primary btn-block">Calcula</button>
+                            <div id="perRes4"></div>
+                        </div>
+                        <button class="btn btn-primary" data-toggle="collapse" data-target="#demo3"><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;Ayuda</button>
+                        <div id="demo3" class="collapse well well-large text-justify">
+                            <br />
+                            <p>
+                                Se llaman combinaciones de <i>n</i> objetos  de orden <i>r</i> a los distintos grupos que se pueden formar al escoger secuencialmente <i>r</i> objetos de entre <i>n</i> posibles, de modo cada una de las combinaciones es distinta de las demás, si difiere en uno de sus objetos por lo menos, sin importar el orden. Notación: <i>C<sub>n<sup>r</sup></sub></i>
+                            </p>
+                            <p>
+                                Para calcular el número de combinaciones de <i>r</i> objetos  que se pueden formar con los <i>n</i> objetos(<i>r</i>)  disponibles, se considera que, por cada combinación de <i>r</i> objetos, existen <i>r</i>! ordenaciones equivalentes de <i>r</i> objetos; en efecto, cada combinación de <i>r</i> objetos se puede permutar de <i>r</i>! maneras diferentes, generando <i>r</i>! ordenaciones. De modo que basta con dividir el número de ordenaciones de <i>n</i> objetos de orden <i>r</i>, entre las permutaciones de <i>r</i> objetos  para obtener las combinaciones de <i>n</i> objetos de orden <i>r</i>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary" data-toggle="collapse" data-target="#demoMAIN"><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;Ayuda</button>
+            <div id="demoMAIN" class="collapse well well-large text-justify">
+                <br />
+                <strong>Especificaciones técnicas</strong>
+                <p>
+                    Recuerda que los valores que le debes de dar a esta calculadora deben de ser del conjunto de los naturales {1, 2, 3, 4, 5, ...}.
+                </p>
+                <strong>Principio multiplicativo</strong>
+                <p>
+                    Si una acción puede realizarse de n<sub>1</sub> maneras diferentes y una segunda acción puede realizarse de n<sub>2</sub> maneras diferentes, entonces ambas acciones pueden realizarse secuencialmente de <i>n</i><sub>1</sub> · <i>n</i><sub>2</sub> maneras diferentes.
+                </p>
+                <strong>Principio aditivo</strong>
+                <p>
+                    Si una acción puede realizarse de n<sub>1</sub> maneras diferentes y una segunda acción puede realizarse de n<sub>2</sub> maneras diferentes, pero no es posible realizar ambas acciones conjuntamente, entonces <i>n</i><sub>1</sub> o <i>n</i><sub>2</sub> pueden realizarse alternativamente de n<sub>1</sub> + n<sub>2</sub> maneras diferentes.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br /><br />
+    <br /><br />
+    <script src="js/main.js"></script>
+</body>
+</html>
